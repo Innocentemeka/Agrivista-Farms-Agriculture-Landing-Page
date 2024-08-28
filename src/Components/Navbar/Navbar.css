@@ -1,0 +1,240 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  padding: 20px 10%;
+  z-index: 3;
+}
+
+.navbar .header {
+  width: 30%;
+}
+.navbar .header h1 {
+  color: #1e1e1e;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 0 8px;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar .button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .button-wrapper .login-btn {
+  color: #fff;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #204e51;
+  margin-right: 25px;
+  border: 1px solid #204e51;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+.navbar .button-wrapper .login-btn:hover {
+  color: #204e51;
+  background-color: #fff;
+  border: 1px solid #204e51;
+}
+
+.navbar .button-wrapper .sign-up-btn {
+  color: #204e51;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #1e1e1e;
+  background-color: #ffffff;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+.navbar .button-wrapper .sign-up-btn:hover {
+  color: #fff;
+  background-color: #204e51;
+  border: 1px solid #204e51;
+}
+
+.navbar .menu {
+  display: none;
+  position: absolute;
+  margin: 18px;
+  right: 7px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.navbar .menu span {
+  height: 3px;
+  width: 100%;
+  background: #000000;
+  border-radius: 3px;
+}
+
+/*---------------css for small screens---------------*/
+
+@media (max-width: 900px) {
+  .navbar .menu {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .navbar ul.navMenu {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    padding: 8px;
+    color: #204e51;
+    background: #204e51;
+    width: 50%;
+    border-radius: 20px;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    padding: 7px 10px;
+    margin: 3px;
+    background: #fff;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar .header h1 {
+    font-size: 25px;
+  }
+  .navbar .button-wrapper .login-btn {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 765px) {
+  .navbar .header h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar .header h1 {
+    font-size: 20px;
+  }
+  .navbar .button-wrapper .login-btn {
+    padding: 8px 20px;
+    margin-right: 10px;
+  }
+  .navbar .button-wrapper .sign-up-btn {
+    margin-right: 10px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 610px) {
+  .navbar .header h1 {
+    font-size: 18px;
+  }
+  .navbar .button-wrapper .login-btn {
+    padding: 6px 15px;
+    margin-right: 8px;
+  }
+  .navbar .button-wrapper .sign-up-btn {
+    margin-right: 10px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar .header h1 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar .button-wrapper .sign-up-btn {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .navbar .header h1 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar .header h1 {
+    font-size: 10px;
+  }
+  .navbar .button-wrapper .sign-up-btn {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 310px) {
+  .navbar .header h1 {
+    font-size: 8px;
+  }
+  .navbar .button-wrapper .login-btn {
+    padding: 4px 13px;
+    margin-right: 6px;
+  }
+  .navbar .button-wrapper .sign-up-btn {
+    margin-right: 35px;
+    padding: 4px 8px;
+  }
+  .navbar .menu span {
+    height: 3px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 290px) {
+  .navbar .header h1 {
+    font-size: 6px;
+  }
+  .navbar .button-wrapper .login-btn {
+    padding: 2px 11px;
+    margin-right: 6px;
+    font-size: 10px;
+  }
+  .navbar .button-wrapper .sign-up-btn {
+    font-size: 10px;
+    margin-right: 40px;
+    padding: 2px 6px;
+  }
+}

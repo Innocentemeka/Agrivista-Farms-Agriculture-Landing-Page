@@ -1,0 +1,166 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10%;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url(/src/Components/Images/image-4.png.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home h1 {
+  color: #fff;
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 93px;
+  margin-bottom: 20px;
+}
+
+.home p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+
+.home .p-small-screen {
+  display: none;
+}
+
+.home .get-started-btn {
+  padding: 13px 30px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  background-color: #204e51;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.home .learn-more-btn {
+  padding: 13px 30px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.home .get-started-btn:hover {
+  color: #204e51;
+  background-color: #fff;
+}
+
+.home .learn-more-btn:hover {
+  color: #204e51;
+  background-color: #fff;
+}
+
+/*---------------css for small screens---------------*/
+
+@media (max-width: 1190px) {
+  .home h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .home h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 924px) {
+  .home h1 {
+    font-size: 60px;
+    line-height: 83px;
+  }
+}
+
+@media (max-width: 790px) {
+  .home h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 660px) {
+  .home h1 {
+    font-size: 40px;
+    line-height: 73px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home p {
+    display: none;
+  }
+  .home .p-small-screen {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .home .get-started-btn {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 555px) {
+  .home h1 {
+    font-size: 35px;
+    line-height: 63px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 35px;
+    line-height: 53px;
+  }
+}
+
+@media (max-width: 460px) {
+  .home h1 {
+    font-size: 30px;
+    line-height: 53px;
+  }
+}
+
+@media (max-width: 396px) {
+  .home h1 {
+    font-size: 26px;
+    line-height: 43px;
+  }
+}
+
+@media (max-width: 342px) {
+  .home h1 {
+    font-size: 23px;
+  }
+  .home .p-small-screen {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 305px) {
+  .home h1 {
+    font-size: 20px;
+  }
+  .home .p-small-screen {
+    font-size: 12px;
+  }
+}

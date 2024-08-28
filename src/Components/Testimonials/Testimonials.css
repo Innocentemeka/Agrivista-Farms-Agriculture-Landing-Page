@@ -1,0 +1,190 @@
+.testimonial {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e4e2;
+  padding: 10px 10%;
+  padding-bottom: 100px;
+}
+
+.testimonial .container h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 82px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.testimonial .container .p-small-screen {
+  display: none;
+}
+
+.testimonial .container p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonial .container .card {
+  width: 100%;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  border-radius: 20px;
+  background-color: #204e51;
+}
+
+.testimonial .container .card img {
+  width: 100%;
+  height: 231px;
+  border-radius: 20px;
+}
+
+.testimonial .container .card-right span {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.testimonial .container .card .card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.testimonial .container .card .card-right .star-rating .star {
+  color: #ffbe40;
+  margin: 5px;
+}
+
+.testimonial .container .card .card-right h3 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.testimonial .container .card .card-right span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.testimonial .container .card .card-right h2 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/*---------------css for small screens---------------*/
+
+@media (max-width: 1185px) {
+  .testimonial .container .p-small-screen {
+    display: block;
+  }
+  .testimonial .container p {
+    display: none;
+  }
+}
+
+@media (max-width: 1035px) {
+  .testimonial .container .card .card-right h3 {
+    font-size: 25px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .testimonial .container .card .card-right h3 {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  .testimonial .container .p-small-screen {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonial .container .card {
+    width: 100%;
+    display: block;
+  }
+
+  .testimonial .container .card img {
+    width: 100%;
+    height: 231px;
+    border-radius: 20px;
+  }
+  .testimonial .container h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 450px) {
+  .testimonial .container h1 {
+    font-size: 45px;
+  }
+  .testimonial .container .card .card-right h3 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .testimonial .container .card .card-right .star-rating .star {
+    width: 17px;
+    margin: 3px;
+  }
+
+  .testimonial .container .p-small-screen {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .testimonial .container h1 {
+    font-size: 40px;
+  }
+  .testimonial .container .card .card-right .star-rating .star {
+    width: 15px;
+    margin: 3px;
+  }
+  .testimonial .container .card .card-right h3 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 376px) {
+  .testimonial .container h1 {
+    font-size: 40px;
+  }
+  .testimonial .container .card .card-right .star-rating .star {
+    width: 15px;
+    margin: 3px;
+  }
+  .testimonial .container .card .card-right h3 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .testimonial .container .card .card-right h2 {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .testimonial .container .card .card-right span {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .testimonial .container h1 {
+    font-size: 30px;
+  }
+}
