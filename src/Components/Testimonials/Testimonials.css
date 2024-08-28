@@ -130,11 +130,25 @@
 
 @media (max-width: 450px) {
   .testimonial .container h1 {
-    font-size: 45px;
+    font-size: 40px;
+  }
+  .testimonial .container .card .card-right h2 {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .testimonial .container .card img {
+    width: 100%;
+    height: 130px;
+    border-radius: 20px;
   }
   .testimonial .container .card .card-right h3 {
     font-size: 15px;
     line-height: 15px;
+    margin-bottom: 5px;
+  }
+
+  .testimonial .container .card .card-right span {
+    margin-bottom: 5px;
   }
 
   .testimonial .container .card .card-right .star-rating .star {
@@ -144,6 +158,16 @@
 
   .testimonial .container .p-small-screen {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 401px) {
+  .testimonial .container .card {
+    padding: 30px 30px;
+  }
+  .testimonial .container .card .card-right span {
+    font-size: 8px;
+    margin-bottom: 5px;
   }
 }
 
@@ -158,6 +182,10 @@
   .testimonial .container .card .card-right h3 {
     font-size: 15px;
     line-height: 15px;
+    margin-bottom: 5px;
+  }
+  .testimonial .container .card .card-right span {
+    margin-bottom: 5px;
   }
 }
 
@@ -165,13 +193,19 @@
   .testimonial .container h1 {
     font-size: 40px;
   }
+  .testimonial .container .card img {
+    width: 100%;
+    height: 110px;
+    border-radius: 20px;
+  }
   .testimonial .container .card .card-right .star-rating .star {
     width: 15px;
     margin: 3px;
   }
   .testimonial .container .card .card-right h3 {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 15px;
+    margin-bottom: 5px;
   }
   .testimonial .container .card .card-right h2 {
     font-size: 10px;
@@ -180,10 +214,18 @@
   .testimonial .container .card .card-right span {
     font-size: 10px;
     line-height: 20px;
+    margin-bottom: 5px;
   }
 }
 
 @media (max-width: 350px) {
+  .testimonial .container .card img {
+    width: 100%;
+    height: 100px;
+  }
+  .testimonial .container .card {
+    padding: 20px 20px;
+  }
   .testimonial .container h1 {
     font-size: 30px;
   }
