@@ -6,6 +6,11 @@
   padding-bottom: 100px;
 }
 
+.testimonial .container {
+  width: 100%;
+  padding: 0;
+}
+
 .testimonial .container h1 {
   font-size: 72px;
   font-weight: 700;
@@ -26,18 +31,47 @@
   margin-bottom: 50px;
 }
 
-.testimonial .container .card {
-  width: 100%;
-  padding: 50px 50px;
+.section-center {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 80vw;
+  height: 450px;
+  max-width: 800px;
+  text-align: center;
+  text-align: start;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-  border-radius: 20px;
-  background-color: #204e51;
+  overflow: hidden;
 }
 
-.testimonial .container .card img {
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 70px;
+  border-radius: 20px;
+  background-color: #204e51;
+  transition: all 0.3s linear;
+}
+
+article.activeSlide {
+  opacity: 1;
+  transform: translate(0);
+}
+article.lastSlide {
+  transform: translate(-100);
+}
+article.nextSlide {
+  transform: translate(100%);
+}
+
+.person-img {
   width: 100%;
   height: 231px;
   border-radius: 20px;
@@ -56,12 +90,12 @@
   align-items: start;
 }
 
-.testimonial .container .card .card-right .star-rating .star {
+.testimonial .container .card-right .star-rating .star {
   color: #ffbe40;
   margin: 5px;
 }
 
-.testimonial .container .card .card-right h3 {
+.testimonial .container .card-right h3 {
   color: #fff;
   font-size: 30px;
   font-weight: 600;
@@ -69,18 +103,51 @@
   margin-bottom: 20px;
 }
 
-.testimonial .container .card .card-right span {
+.testimonial .container .card-right span {
   color: #fff;
   font-size: 13px;
   font-weight: 300;
   line-height: 24px;
 }
 
-.testimonial .container .card .card-right h2 {
+.testimonial .container .card-right h2 {
   color: #fff;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.icon {
+  font-size: 100px;
+  color: #204e51;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 160px;
+  transform: translate(-50%);
+  background-color: transparent;
+  color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.prev:hover,
+.next:hover {
+  color: #204e51;
+  background: #fff;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 0;
 }
 
 /*---------------css for small screens---------------*/
@@ -95,14 +162,14 @@
 }
 
 @media (max-width: 1035px) {
-  .testimonial .container .card .card-right h3 {
+  .testimonial .container .card-right h3 {
     font-size: 25px;
     line-height: 20px;
   }
 }
 
 @media (max-width: 960px) {
-  .testimonial .container .card .card-right h3 {
+  .testimonial .container .card-right h3 {
     font-size: 20px;
     line-height: 18px;
   }
@@ -113,18 +180,33 @@
 }
 
 @media (max-width: 900px) {
-  .testimonial .container .card {
+  .testimonial .container article {
     width: 100%;
     display: block;
+    text-align: center;
   }
 
-  .testimonial .container .card img {
-    width: 100%;
-    height: 231px;
-    border-radius: 20px;
+  .testimonial .container .person-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  article {
+    padding: 30px 70px;
+  }
+  .prev,
+  .next {
+    top: 180px;
   }
   .testimonial .container h1 {
     font-size: 55px;
+  }
+}
+
+@media (max-width: 700px) {
+  .prev,
+  .next {
+    top: 200px;
   }
 }
 
@@ -132,26 +214,21 @@
   .testimonial .container h1 {
     font-size: 40px;
   }
-  .testimonial .container .card .card-right h2 {
+  .testimonial .container .card-right h2 {
     font-size: 10px;
     line-height: 20px;
   }
-  .testimonial .container .card img {
-    width: 100%;
-    height: 130px;
-    border-radius: 20px;
-  }
-  .testimonial .container .card .card-right h3 {
+  .testimonial .container .card-right h3 {
     font-size: 15px;
     line-height: 15px;
     margin-bottom: 5px;
   }
 
-  .testimonial .container .card .card-right span {
+  .testimonial .container .card-right span {
     margin-bottom: 5px;
   }
 
-  .testimonial .container .card .card-right .star-rating .star {
+  .testimonial .container .card-right .star-rating .star {
     width: 17px;
     margin: 3px;
   }
@@ -162,10 +239,7 @@
 }
 
 @media (max-width: 401px) {
-  .testimonial .container .card {
-    padding: 30px 30px;
-  }
-  .testimonial .container .card .card-right span {
+  .testimonial .container .card-right span {
     font-size: 8px;
     margin-bottom: 5px;
   }
@@ -175,16 +249,16 @@
   .testimonial .container h1 {
     font-size: 40px;
   }
-  .testimonial .container .card .card-right .star-rating .star {
+  .testimonial .container .card-right .star-rating .star {
     width: 15px;
     margin: 3px;
   }
-  .testimonial .container .card .card-right h3 {
+  .testimonial .container .card-right h3 {
     font-size: 15px;
     line-height: 15px;
     margin-bottom: 5px;
   }
-  .testimonial .container .card .card-right span {
+  .testimonial .container .card-right span {
     margin-bottom: 5px;
   }
 }
@@ -193,25 +267,20 @@
   .testimonial .container h1 {
     font-size: 40px;
   }
-  .testimonial .container .card img {
-    width: 100%;
-    height: 110px;
-    border-radius: 20px;
-  }
-  .testimonial .container .card .card-right .star-rating .star {
+  .testimonial .container .card-right .star-rating .star {
     width: 15px;
     margin: 3px;
   }
-  .testimonial .container .card .card-right h3 {
+  .testimonial .container .card-right h3 {
     font-size: 10px;
     line-height: 15px;
     margin-bottom: 5px;
   }
-  .testimonial .container .card .card-right h2 {
+  .testimonial .container .card-right h2 {
     font-size: 10px;
     line-height: 20px;
   }
-  .testimonial .container .card .card-right span {
+  .testimonial .container .card-right span {
     font-size: 10px;
     line-height: 20px;
     margin-bottom: 5px;
@@ -219,11 +288,7 @@
 }
 
 @media (max-width: 350px) {
-  .testimonial .container .card img {
-    width: 100%;
-    height: 100px;
-  }
-  .testimonial .container .card {
+  .testimonial .container article {
     padding: 20px 20px;
   }
   .testimonial .container h1 {

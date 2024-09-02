@@ -148,6 +148,7 @@
   .contact .container {
     width: 100%;
     display: block;
+    padding: 0 10%;
   }
   .contact .container .contact-left h1 {
     font-size: 28px;
